@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Header from '../header/index.jsx'
-
+import Footer from '../footer/index.jsx'
 class App extends React.Component {
   render() {
     return(
@@ -15,6 +15,7 @@ class App extends React.Component {
           </head>
           <body>
             <Header />
+            <Footer />
           </body>
       </html>
     )
