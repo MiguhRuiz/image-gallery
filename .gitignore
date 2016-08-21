@@ -46,5 +46,7 @@ jspm_packages
 index.html
 
 # Build file
-
 public/js/app.js
+
+# Database
+gallery
