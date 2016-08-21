@@ -7,7 +7,7 @@ var streamify = require('gulp-streamify')
 
 gulp.task('build', function() {
     browserify({
-        entries: './src/index.jsx',
+        entries: './src/client/index.jsx',
         extensions: ['jsx'],
         debug: true
     })
@@ -19,7 +19,7 @@ gulp.task('build', function() {
 })
 
 gulp.task('watch', function () {
-  gulp.watch('./src/components/**/*.jsx', ['build'])
+  gulp.watch('./src/client/**/*.jsx', ['build'])
 })
 
 gulp.task('default', ['build', 'watch'])

@@ -11,6 +11,7 @@ import Component from './src/server/components/gallery-app/index.jsx'
 const App = renderToString(<Component />)
 
 app.use(BodyParser.json())
+app.use('/public', express.static('public'))
 app.use('/api', api)
 
 app.get('/', (req, res) => {

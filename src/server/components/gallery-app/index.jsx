@@ -15,7 +15,9 @@ class App extends React.Component {
           </head>
           <body>
             <Header />
+            <div className="react-app"></div>
             <Footer />
+            <script type="application/javascript" src="/public/js/app.js" />
           </body>
       </html>
     )
