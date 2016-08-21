@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "ava --verbose",
-    "build": "gulp",
+    "build": "gulp build",
     "start": "node index.js"
   },
   "repository": {
@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "api-helpers": "^1.1.0",
+    "babel-preset-es2015": "^6.13.2",
     "babel-register": "^6.11.6",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
