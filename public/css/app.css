@@ -47,6 +47,22 @@ section {
   margin-top:-3.05em;
 }
 
+.flat-publish {
+  background: #22354c;
+  border-radius: 50%;
+  bottom: 5em;
+  height: 56px;
+  position: fixed;
+  right: 1em;
+  width: 56px;
+  z-index: 998;
+}
+
+.icon-pen {
+  display: block;
+  margin: .7em auto 0 auto;
+}
+
 .images {
   display: flex;
   flex-direction: row;
