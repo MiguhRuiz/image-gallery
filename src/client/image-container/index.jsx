@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 import Image from '../image/index.jsx'
 
@@ -25,6 +26,9 @@ class ImageContainer extends React.Component {
               return <Image url={image.doc.image} key={image.doc._id} />
             })
           }
+          <Link to="/new" activeClassName="active">
+            <div className="flat-publish"><img src="/public/img/pen.png" className="icon-pen"/></div>
+          </Link>
         </section>
       )
     } else {

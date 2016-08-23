@@ -16,9 +16,6 @@ class App extends React.Component {
           <body>
             <Header />
             <div className="react-app"></div>
-            <a href="/new">
-              <div className="flat-publish"><img src="/public/img/pen.png" className="icon-pen"/></div>
-            </a>
             <Footer />
             <script type="application/javascript" src="/public/js/app.js" />
           </body>
