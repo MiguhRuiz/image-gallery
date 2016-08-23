@@ -50,3 +50,7 @@ public/js/app.js
 
 # Database
 gallery
+_replicator
+_users
+pouch__all_dbs__
+log.txt
