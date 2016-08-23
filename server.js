@@ -24,6 +24,10 @@ app.get('/', (req, res) => {
   res.send(App)
 })
 
+app.get('/new', (req, res) => {
+  res.send(App)
+})
+
 app.listen(port, () => {
   console.log(`[APP] Server listening on ${port}`)
 })
