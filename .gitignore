@@ -54,3 +54,6 @@ _replicator
 _users
 pouch__all_dbs__
 log.txt
+
+# Configuration file
+config.js
