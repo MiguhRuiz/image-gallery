@@ -1,6 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Router, Route, browserHistory } from 'react-router'
 
 import ImageContainer from './image-container/index.jsx'
 
-ReactDOM.render(<ImageContainer />, document.getElementsByClassName('react-app')[0])
+ReactDOM.render((
+  <Router history={browserHistory}>
+    <Route path="/" component={ImageContainer}>
+    </Route>
+  </Router>
+), document.getElementsByClassName('react-app')[0])
