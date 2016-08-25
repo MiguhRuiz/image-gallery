@@ -1,5 +1,7 @@
 import React from 'react'
 import config from '../../../config'
+import request from 'request-promise'
+
 class uploadForm extends React.Component {
   uploadImage() {
     const r = new XMLHttpRequest()
@@ -9,27 +11,21 @@ class uploadForm extends React.Component {
 
     d.append('image', e)
 
-    function uploadServer(l) {
-      r.open('POST', '/api')
-      r.setRequestHeader('Content-Type', 'application/json')
-      r.onreadystatechange = function () {
-        if(r.status === 200 && r.readyState === 4) {
-          let res = JSON.parse(r.responseText)
-          console.log(res)
-        }
-      }
-      r.send({
-        "image": l
-      })
-    }
-
     r.open('POST', 'https://api.imgur.com/3/image/')
     r.setRequestHeader('Authorization', `Client-ID ${config.client}`)
     r.onreadystatechange = function () {
       if(r.status === 200 && r.readyState === 4) {
         let res = JSON.parse(r.responseText)
         u = `https://i.imgur.com/${res.data.id}.png`
-        uploadServer(u)
+        let a = { image: u }
+        let opts = {
+          method: 'POST',
+          uri: 'http://localhost:3000/api',
+          json: true,
+          body: a
+        }
+        request(opts)
+        window.location.pathname = '/'
       }
     }
     r.send(d)

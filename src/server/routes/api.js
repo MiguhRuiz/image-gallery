@@ -21,20 +21,13 @@ Router.get('/:id', (req, res) => {
     .then((doc) => {
       res.json(doc)
     })
-    .catch((err) => {
-      res.status(404)
-      res.json(err)
-    })
 })
 Router.post('/', (req, res) => {
   db
     .post(req.body)
     .then((res) => {
+      res.status(200)
       res.json(res)
-    })
-    .catch((err) => {
-      res.status(404)
-      res.json(err)
     })
 })
 
